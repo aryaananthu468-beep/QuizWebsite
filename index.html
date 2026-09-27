@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuizMaster - Interactive Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background decoration -->
+    <div class="circle circle-one"></div>
+    <div class="circle circle-two"></div>
+
+    <main class="app">
+
+        <!-- ================= HOME SCREEN ================= -->
+
+        <section id="home-screen" class="screen">
+
+            <div class="logo">🧠</div>
+
+            <h1>Quiz<span>Master</span></h1>
+
+            <p class="subtitle">
+                Challenge yourself. Learn something new.
+            </p>
+
+            <div class="name-box">
+
+                <label for="player-name">
+                    Enter your name
+                </label>
+
+                <input
+                    type="text"
+                    id="player-name"
+                    placeholder="Your name..."
+                    maxlength="20"
+                >
+
+            </div>
+
+            <div class="quiz-info">
+
+                <div class="info-card">
+                    <span>📚</span>
+                    <strong>20</strong>
+                    <small>Questions</small>
+                </div>
+
+                <div class="info-card">
+                    <span>⏱️</span>
+                    <strong>15s</strong>
+                    <small>Per Question</small>
+                </div>
+
+                <div class="info-card">
+                    <span>🏆</span>
+                    <strong>100</strong>
+                    <small>Max Score</small>
+                </div>
+
+            </div>
+
+            <button id="start-btn" class="main-btn">
+                Start Quiz
+                <span>→</span>
+            </button>
+
+            <p id="best-score" class="best-score"></p>
+
+        </section>
+
+
+        <!-- ================= QUIZ SCREEN ================= -->
+
+        <section id="quiz-screen" class="screen hidden">
+
+            <div class="quiz-header">
+
+                <div>
+                    <p class="welcome">
+                        Good luck, <span id="display-name">Player</span>! 👋
+                    </p>
+
+                    <p id="question-number">
+                        Question 1 of 20
+                    </p>
+                </div>
+
+                <div class="score-box">
+                    ⭐ <span id="score">0</span>
+                </div>
+
+            </div>
+
+
+            <!-- Progress -->
+
+            <div class="progress-area">
+
+                <div class="progress-info">
+                    <span>Progress</span>
+                    <span id="progress-text">5%</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div id="progress"></div>
+                </div>
+
+            </div>
+
+
+            <!-- Timer -->
+
+            <div class="timer-container">
+
+                <div class="timer-circle">
+
+                    <svg>
+                        <circle
+                            cx="35"
+                            cy="35"
+                            r="30">
+                        </circle>
+
+                        <circle
+                            id="timer-ring"
+                            class="timer-ring"
+                            cx="35"
+                            cy="35"
+                            r="30">
+                        </circle>
+                    </svg>
+
+                    <span id="timer">15</span>
+
+                </div>
+
+                <span class="timer-text">
+                    seconds remaining
+                </span>
+
+            </div>
+
+
+            <!-- Question -->
+
+            <div class="question-card">
+
+                <span class="question-label">
+                    QUESTION
+                </span>
+
+                <h2 id="question">
+                    Question goes here
+                </h2>
+
+            </div>
+
+
+            <!-- Answers -->
+
+            <div id="answers" class="answers"></div>
+
+
+            <!-- Next -->
+
+            <button id="next-btn" class="next-btn hidden">
+                Next Question
+                <span>→</span>
+            </button>
+
+        </section>
+
+
+        <!-- ================= RESULT SCREEN ================= -->
+
+        <section id="result-screen" class="screen hidden">
+
+            <div class="result-icon">
+                🎉
+            </div>
+
+            <p class="result-small">
+                QUIZ COMPLETED
+            </p>
+
+            <h1>
+                Great job, <span id="result-name">Player</span>!
+            </h1>
+
+            <div class="score-circle">
+
+                <div>
+                    <span id="final-score">0</span>
+                    <small>/ 20</small>
+                </div>
+
+            </div>
+
+            <h2 id="percentage">
+                0%
+            </h2>
+
+            <p id="result-message">
+                Keep learning!
+            </p>
+
+
+            <!-- Statistics -->
+
+            <div class="statistics">
+
+                <div class="stat correct-stat">
+                    <span>✓</span>
+                    <strong id="correct-count">0</strong>
+                    <small>Correct</small>
+                </div>
+
+                <div class="stat wrong-stat">
+                    <span>✕</span>
+                    <strong id="wrong-count">0</strong>
+                    <small>Wrong</small>
+                </div>
+
+                <div class="stat unanswered-stat">
+                    <span>−</span>
+                    <strong id="unanswered-count">0</strong>
+                    <small>Unanswered</small>
+                </div>
+
+            </div>
+
+
+            <div class="result-buttons">
+
+                <button id="restart-btn" class="main-btn">
+                    🔄 Play Again
+                </button>
+
+                <button id="home-btn" class="secondary-btn">
+                    🏠 Home
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+    
+    
+
+
+
+
+
+
+        
+        
+
+    
+    
+
+
+    
+    
+        
+        
+
+
